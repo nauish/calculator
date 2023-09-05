@@ -49,6 +49,10 @@ button {
 button.two-fr {
   border-radius: 50px;
 }
+
+button:hover {
+  background-color: turquoise;
+}
 /* 
 button.number {
   background-color: grey;
