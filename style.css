@@ -8,18 +8,34 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: lightblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .calculator {
   background-color: white;
   border-radius: 20px;
   padding: 20px;
-  min-width: 300px;
+  width: 300px;
 }
 
 .output {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  align-items: flex-end;
+  justify-content: space-around;
   min-height: 150px;
-  color: white;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin: 10px;
+}
+
+.output .previous-operant {
+  font-size: 1.5rem;
+}
+
+.output .current-operant {
+  font-size: 2.5rem;
 }
 
 .first-row {
@@ -44,6 +60,7 @@ button {
   border: none;
   width: auto;
   border-radius: 50%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 button.two-fr {
