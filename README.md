@@ -4,7 +4,7 @@
 
 A simple calculator with basic operations.
 
-## Planned Features
+## Features
 
 Addition
 Subtraction
