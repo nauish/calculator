@@ -12,7 +12,7 @@ body {
 }
 
 .calculator {
-  background-color: white;
+  background-color: black;
   border-radius: 20px;
   padding: 20px;
   width: 300px;
@@ -28,6 +28,12 @@ body {
   word-wrap: break-word;
   word-break: break-all;
   margin: 10px;
+  background-color: rgb(1, 103, 135);
+  color: white;
+  border-radius: 10px;
+  padding-right: 24px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .output .previous-operant {
@@ -60,19 +66,45 @@ button {
   border: none;
   width: auto;
   border-radius: 50%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   cursor: pointer;
+}
+
+button.number {
+  background-color: rgb(79, 79, 79);
+  color: white;
+}
+
+button.operator {
+  background-color: darkorange;
+}
+
+button.equal {
+  background-color: darkgray;
+  color: white;
 }
 
 button.two-fr {
   border-radius: 50px;
 }
 
-button:hover {
-  background-color: turquoise;
+button.number:hover {
+  background-color: lightgray;
+  color: black;
 }
-/* 
-button.number {
-  background-color: grey;
-  color: white;
-} */
+
+button.number:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+button.operator:hover {
+  background-color: lightcoral;
+  color: black;
+}
+
+button.all-clear:hover,
+button.clear:hover {
+  background-color: rgb(182, 182, 182);
+}
