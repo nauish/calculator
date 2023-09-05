@@ -6,10 +6,10 @@ A simple calculator with basic operations.
 
 ## Features
 
-Addition
-Subtraction
-Multiplication
-Division
+- Addition
+- Subtraction
+- Multiplication
+- Division
 
 ## Acknowledgments
 
