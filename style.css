@@ -108,3 +108,7 @@ button.all-clear:hover,
 button.clear:hover {
   background-color: rgb(182, 182, 182);
 }
+
+button.equal:hover {
+  background-color: rgb(62, 62, 62);
+}
