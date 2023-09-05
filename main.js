@@ -1,3 +1,9 @@
+const numberButtons = document.querySelectorAll(".number");
+const operationButtons = document.querySelectorAll(".operator");
+const equalButton = document.querySelector(".equal-to");
+const clearButton = document.querySelector(".clear");
+const allClearButton = document.querySelector(".all-clear");
+
 const add = function (a, b) {
   return a + b;
 };
