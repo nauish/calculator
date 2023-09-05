@@ -46,8 +46,8 @@ class Calculator {
 
   compute() {
     let result;
-    const previousOperant = parseFloat(this.previousOperant, 10);
-    const currentOperant = parseFloat(this.currentOperant, 10);
+    const previousOperant = parseFloat(this.previousOperant);
+    const currentOperant = parseFloat(this.currentOperant);
     if (isNaN(previousOperant) || isNaN(currentOperant)) return;
     switch (this.operator) {
       case "+":
@@ -66,7 +66,7 @@ class Calculator {
         return;
     }
     // Display result on currentOperant
-    this.currentOperant = result;
+    this.currentOperant = +result.toFixed(10);
     this.previousOperant = "";
   }
 
