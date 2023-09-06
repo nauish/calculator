@@ -22,17 +22,11 @@ class Calculator {
   }
 
   clickNumbers(number) {
+    if (typeof this.currentOperant === "number") {
+      this.allClear();
+    }
     // Prevent multiple dots
     if (this.currentOperant.includes(".") && number === ".") return;
-    // This removes the leading 0 if other numbers except dot are press
-    else if (this.currentOperant === "0" && number === ".") {
-      this.currentOperant = "0";
-    } else if (
-      this.currentOperant[0] === "0" &&
-      this.currentOperant[1] !== "."
-    ) {
-      this.currentOperant = "";
-    }
     // Concatenate strings instead of adding it up
     this.currentOperant = this.currentOperant.toString() + number.toString();
   }
@@ -94,6 +88,26 @@ const previousOperantHTML = document.querySelector(".previous-operant");
 const currentOperantHTML = document.querySelector(".current-operant");
 
 const calculator = new Calculator(previousOperantHTML, currentOperantHTML);
+
+document.addEventListener("keydown", (event) => {
+  const allowedNumbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  if (event.key in allowedNumbers) {
+    calculator.clickNumbers(event.key);
+  } else if (event.key == ".") {
+    calculator.clickNumbers(".");
+  } else if (event.key === "+" || event.key === "-") {
+    calculator.clickOperation(event.key);
+  } else if (event.key === "x" || event.key === "*") {
+    calculator.clickOperation("x");
+  } else if (event.key === "/") {
+    calculator.clickOperation("÷");
+  } else if (event.key === "Enter") {
+    calculator.compute();
+  } else if (event.key === "Backspace" || event.key === "Delete") {
+    calculator.clear();
+  }
+  calculator.refreshOutput();
+});
 
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
