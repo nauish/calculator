@@ -24,6 +24,15 @@ class Calculator {
   clickNumbers(number) {
     // Prevent multiple dots
     if (this.currentOperant.includes(".") && number === ".") return;
+    // This removes the leading 0 if other numbers except dot are press
+    else if (this.currentOperant === "0" && number === ".") {
+      this.currentOperant = "0";
+    } else if (
+      this.currentOperant[0] === "0" &&
+      this.currentOperant[1] !== "."
+    ) {
+      this.currentOperant = "";
+    }
     // Concatenate strings instead of adding it up
     this.currentOperant = this.currentOperant.toString() + number.toString();
   }
