@@ -22,6 +22,7 @@ class Calculator {
   }
 
   clickNumbers(number) {
+    // Clear out computed number if no operation button is pressed
     if (typeof this.currentOperant === "number") {
       this.allClear();
     }
@@ -29,6 +30,12 @@ class Calculator {
     if (this.currentOperant.includes(".") && number === ".") return;
     // Concatenate strings instead of adding it up
     this.currentOperant = this.currentOperant.toString() + number.toString();
+    if (
+      this.currentOperant[0] == "0" &&
+      this.currentOperant[1] in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    ) {
+      this.currentOperant = this.currentOperant.slice(1);
+    }
   }
 
   clickOperation(operator) {
