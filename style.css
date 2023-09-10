@@ -102,7 +102,7 @@ button.number:hover {
 }
 
 button.operator:hover {
-  background-color: lightcoral;
+  background-color: rgb(255, 182, 81);
   color: black;
 }
 
