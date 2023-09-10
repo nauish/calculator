@@ -1,5 +1,7 @@
 # Calculator
 
+**[Live Demo](https://nauish.github.io/calculator/)**
+
 ## Introduction
 
 A simple calculator with basic operations.
