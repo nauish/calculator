@@ -119,3 +119,8 @@ button.clear:hover {
 button.equal:hover {
   background-color: rgb(62, 62, 62);
 }
+
+button:active {
+  transform: translateY(2px);
+  background-color: rgb(62, 62, 62);
+}
